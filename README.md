@@ -9,3 +9,6 @@ https://asciinema.org/a/ihqW5ugKBQP4s8noVCB23qzqn
 
 НОД
 https://asciinema.org/a/Wj9NBPFlkYaHoUUPc2H3bmtmP
+
+Арифметическая прогрессия
+https://asciinema.org/a/h0dLTmpwnNq5eFePezIHoddP7
