@@ -12,3 +12,7 @@ https://asciinema.org/a/Wj9NBPFlkYaHoUUPc2H3bmtmP
 
 Арифметическая прогрессия
 https://asciinema.org/a/h0dLTmpwnNq5eFePezIHoddP7
+
+Простое ли число?
+https://asciinema.org/a/DUcmj3ZHoyg1lpiBqdWAxsctw
+
