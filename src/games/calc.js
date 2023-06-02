@@ -1,7 +1,7 @@
 import runGame from '../index.js';
 import { getRandomNumber } from '../utils.js';
 
-const operationSymbols = ['+', '-', '*'];
+const operators = ['+', '-', '*'];
 const description = 'What is the result of the expression?';
 
 const getRandomOperationSymbol = (symbols) => {
@@ -16,7 +16,7 @@ const calcArithmeticOperation = (symbol, firstValue, secondValue) => {
     case '+': return firstValue + secondValue;
     case '-': return firstValue - secondValue;
     case '*': return firstValue * secondValue;
-    
+    default: return null;
   }
 };
 
