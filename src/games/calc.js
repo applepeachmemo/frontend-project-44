@@ -20,7 +20,7 @@ const calcArithmeticOperation = (symbol, firstValue, secondValue) => {
   }
 };
 
-const getQuestionAndAnswer = () => {
+const getRound = () => {
   const randomSymbol = getRandomOperationSymbol(operationSymbols);
   const firstNumber = getRandomNumber(0, 10);
   const secondNubmer = getRandomNumber(0, 10);
