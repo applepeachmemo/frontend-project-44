@@ -20,7 +20,7 @@ const calcArithmeticOperation = (symbol, firstValue, secondValue) => {
   }
 };
 
-const getRound = () => {
+const getQuestionAndAnswer = () => {
   const randomSymbol = getRandomOperationSymbol(operationSymbols);
   const firstNumber = getRandomNumber(0, 10);
   const secondNubmer = getRandomNumber(0, 10);
@@ -32,5 +32,5 @@ const getRound = () => {
 };
 
 export default () => {
-  runGame(description, getRound);
+  runGame(description, getQuestionAndAnswer);
 };
