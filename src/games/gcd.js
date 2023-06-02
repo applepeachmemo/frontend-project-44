@@ -13,7 +13,7 @@ const getGreatestCommonDivisor = (firstItem, secondItem) => {
   return getGreatestCommonDivisor(firstItem, secondItem - firstItem);
 };
 
-const getQuestionAndAnswer = () => {
+const getRound = () => {
   const firstNumber = getRandomNumber(1, 50);
   const secondNubmer = getRandomNumber(1, 50);
 
@@ -24,5 +24,5 @@ const getQuestionAndAnswer = () => {
 };
 
 export default () => {
-  runGame(description, getQuestionAndAnswer);
+  runGame(description, getRound);
 };
