@@ -16,7 +16,7 @@ const calcArithmeticOperation = (symbol, firstValue, secondValue) => {
     case '+': return firstValue + secondValue;
     case '-': return firstValue - secondValue;
     case '*': return firstValue * secondValue;
-    default: return null;
+    
   }
 };
 
@@ -32,5 +32,5 @@ const getQuestionAndAnswer = () => {
 };
 
 export default () => {
-  runGame(description, getQuestionAndAnswer);
+  runGame(description, getRound);
 };
