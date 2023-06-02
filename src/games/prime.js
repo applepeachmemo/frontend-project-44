@@ -12,7 +12,7 @@ const isPrimeNumber = (number) => {
   return true;
 };
 
-const getQuestionAndAnswer = () => {
+const getRound = () => {
   const question = getRandomNumber(2, 50);
   const correctAnswer = isPrimeNumber(question) ? 'yes' : 'no';
 
@@ -20,5 +20,5 @@ const getQuestionAndAnswer = () => {
 };
 
 export default () => {
-  runGame(description, getQuestionAndAnswer);
+  runGame(description, getRound);
 };
