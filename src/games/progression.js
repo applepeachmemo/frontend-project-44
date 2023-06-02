@@ -17,7 +17,7 @@ const getArithmeticProgression = () => {
   return progression;
 };
 
-const getQuestionAndAnswer = () => {
+const getRound = () => {
   const progression = getArithmeticProgression();
   const randomIndex = getRandomNumber(0, progressionLength);
 
@@ -29,5 +29,5 @@ const getQuestionAndAnswer = () => {
 };
 
 export default () => {
-  runGame(description, getQuestionAndAnswer);
+  runGame(description, getRound);
 };
