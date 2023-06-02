@@ -1,12 +1,12 @@
 import runGame from '../index.js';
 import { getRandomNumber } from '../utils.js';
 
-const operators = ['+', '-', '*'];
+const operationSymbols = ['+', '-', '*'];
 const description = 'What is the result of the expression?';
 
 const getRandomOperationSymbol = (symbols) => {
   const symbolsLength = symbols.length;
-  const randomIndex = getRandomNumber(0, symbolsLength);
+  const randomIndex = getRandomNumber(0, symbolsLength - 1);
   const randomSymbol = symbols[randomIndex];
   return randomSymbol;
 };
@@ -22,11 +22,11 @@ const calcArithmeticOperation = (symbol, firstValue, secondValue) => {
 
 const getRound = () => {
   const randomSymbol = getRandomOperationSymbol(operationSymbols);
-  const firstNumber = getRandomNumber(0, 10);
-  const secondNubmer = getRandomNumber(0, 10);
+  const Number1 = getRandomNumber(0, 10);
+  const Nubmer2 = getRandomNumber(0, 10);
 
-  const question = `${firstNumber} ${randomSymbol} ${secondNubmer}`;
-  const correctAnswer = String(calcArithmeticOperation(randomSymbol, firstNumber, secondNubmer));
+  const question = `${Number1} ${randomSymbol} ${Nubmer2}`;
+  const correctAnswer = String(calcArithmeticOperation(randomSymbol, Number1, Nubmer2));
 
   return [question, correctAnswer];
 };
