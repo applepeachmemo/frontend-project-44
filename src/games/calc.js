@@ -40,6 +40,5 @@ export default () => {
     runGame(description, getRound);
   } catch (error) {
     console.error('An error occurred:', error.message);
-    
   }
 };
