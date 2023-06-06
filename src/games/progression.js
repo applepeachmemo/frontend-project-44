@@ -1,4 +1,3 @@
-
 import runGame from '../index.js';
 import { getRandomNumber } from '../utils.js';
 
@@ -14,16 +13,17 @@ const getArithmeticProgression = () => {
     progression.push(progressionNumber);
     progressionNumber += step;
   }
+
   return progression;
 };
 
 const getRound = () => {
   const progression = getArithmeticProgression();
-  const randomIndex = getRandomNumber(0, progressionLength);
+  const randomIndex = getRandomNumber(0, progressionLength - 1);
 
   const correctAnswer = String(progression[randomIndex]);
   progression[randomIndex] = '..';
-  const question = progression;
+  const question = progression.join(' ');
 
   return [question, correctAnswer];
 };
