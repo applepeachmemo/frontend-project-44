@@ -9,8 +9,6 @@ export default (description, getRound) => {
 
   console.log(description);
 
-  let hasWrongAnswer = false;
-
   for (let i = 0; i < roundsCount; i += 1) {
     const [question, correctAnswer] = getRound();
     console.log(`Question: ${question}`);
@@ -19,14 +17,11 @@ export default (description, getRound) => {
     if (correctAnswer !== playerAnswer) {
       console.log(`'${playerAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
       console.log(`Let's try again, ${playerName}`);
-      hasWrongAnswer = true;
-      break;
+      return;
     }
 
     console.log('Correct!');
   }
 
-  if (!hasWrongAnswer) {
-    console.log(`Congratulations, ${playerName}`);
-  }
+  console.log(`Congratulations, ${playerName}`);
 };
