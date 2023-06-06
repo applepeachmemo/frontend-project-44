@@ -11,26 +11,35 @@ const getRandomOperationSymbol = (symbols) => {
   return randomSymbol;
 };
 
-const calcArithmeticOperation = (symbol, firstValue, secondValue) => {
+const calculate = (symbol, x, y) => {
   switch (symbol) {
-    case '+': return firstValue + secondValue;
-    case '-': return firstValue - secondValue;
-    case '*': return firstValue * secondValue;
-    default: return null;
+    case '+':
+      return x + y;
+    case '-':
+      return x - y;
+    case '*':
+      return x * y;
+    default:
+      throw new Error(`Unsupported operation: ${symbol}`);
   }
 };
 
 const getRound = () => {
   const randomSymbol = getRandomOperationSymbol(operationSymbols);
-  const Number1 = getRandomNumber(0, 10);
-  const Nubmer2 = getRandomNumber(0, 10);
+  const number1 = getRandomNumber(0, 10);
+  const number2 = getRandomNumber(0, 10);
 
-  const question = `${Number1} ${randomSymbol} ${Nubmer2}`;
-  const correctAnswer = String(calcArithmeticOperation(randomSymbol, Number1, Nubmer2));
+  const question = `${number1} ${randomSymbol} ${number2}`;
+  const correctAnswer = String(calculate(randomSymbol, number1, number2));
 
   return [question, correctAnswer];
 };
 
 export default () => {
-  runGame(description, getRound);
+  try {
+    runGame(description, getRound);
+  } catch (error) {
+    console.error('An error occurred:', error.message);
+    
+  }
 };
