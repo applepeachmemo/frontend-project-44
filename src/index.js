@@ -27,7 +27,7 @@ const runGame = (description, getRound) => {
   }
 
   if (!hasWrongAnswer) {
-    console.log(`Congratulations, ${playerName}`);
+    console.log(`Congratulations, ${playerName}!`);
   }
 };
 
