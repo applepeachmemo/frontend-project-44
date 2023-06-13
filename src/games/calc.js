@@ -29,7 +29,6 @@ const getRound = () => {
   return [question, correctAnswer];
 };
 
-export default () => {  
-runGame(description, getRound);
-
-}; 
+export default () => {
+  runGame(description, getRound);
+};
