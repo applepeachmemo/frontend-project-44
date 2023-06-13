@@ -7,8 +7,9 @@ import {
 const description = 'Answer "yes" if the number is even, otherwise answer "no".';
 
 const getRound = () => {
-  const question = getRandomNumber(0, 100);
-  const correctAnswer = isEven(question) ? 'yes' : 'no';
+  const number = getRandomNumber(0, 100);
+  const question = String(number);
+  const correctAnswer = isEven(number) ? 'yes' : 'no';
 
   return [question, correctAnswer];
 };
