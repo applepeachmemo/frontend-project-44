@@ -3,22 +3,22 @@ import { getRandomNumber } from '../utils.js';
 
 const description = 'Find the greatest common divisor of given numbers';
 
-const getGreatestCommonDivisor = (firstItem, secondItem) => {
-  if (firstItem === 0 || secondItem === 0) {
-    return firstItem + secondItem;
+const getGcd = (Item1, Item2) => {
+  if (Item1 === 0 || Item2 === 0) {
+    return Item1 + Item2;
   }
-  if (firstItem > secondItem) {
-    return getGreatestCommonDivisor(firstItem - secondItem, secondItem);
+  if (Item1 > Item2) {
+    return getGcd(Item1 - Item2, Item2);
   }
-  return getGreatestCommonDivisor(firstItem, secondItem - firstItem);
+  return getGcd(Item1, Item2 - Item1);
 };
 
 const getRound = () => {
-  const firstNumber = getRandomNumber(1, 50);
-  const secondNubmer = getRandomNumber(1, 50);
+  const Number1 = getRandomNumber(1, 50);
+  const Number2 = getRandomNumber(1, 50);
 
-  const question = `${firstNumber} ${secondNubmer}`;
-  const correctAnswer = String(getGreatestCommonDivisor(firstNumber, secondNubmer));
+  const question = `${Number1} ${Number2}`;
+  const correctAnswer = String(getGcd(Number1, Number2));
 
   return [question, correctAnswer];
 };
