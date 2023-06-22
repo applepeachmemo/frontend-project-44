@@ -14,11 +14,11 @@ const getGcd = (Item1, Item2) => {
 };
 
 const getRound = () => {
-  const Number1 = getRandomNumber(1, 50);
-  const Number2 = getRandomNumber(1, 50);
+  const number1 = getRandomNumber(1, 50);
+  const number2 = getRandomNumber(1, 50);
 
-  const question = `${Number1} ${Number2}`;
-  const correctAnswer = String(getGcd(Number1, Number2));
+  const question = `${number1} ${number2}`;
+  const correctAnswer = String(getGcd(number1, number2));
 
   return [question, correctAnswer];
 };
