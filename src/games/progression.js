@@ -1,7 +1,6 @@
 import runGame from '../index.js';
 import { getRandomNumber } from '../utils.js';
 
-
 const description = 'What number is missing in the progression?';
 
 const getArithmeticProgression = (start, step, length) => {
